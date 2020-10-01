@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #f7f7f7;
+}
