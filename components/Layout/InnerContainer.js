@@ -8,11 +8,6 @@ const InnerContainer = styled.section`
   margin-bottom: 1em;
 `;
 
-export const SmallNarrowContainer = styled(InnerContainer)`
-  display: flex;
-  padding: 0 1em;
-`;
-
 export const SmallContainer = styled(InnerContainer)`
   background: ${({ transparent }) => transparent && "transparent"};
   border-color: ${({ transparent }) => transparent && "transparent"};
