@@ -60,7 +60,10 @@ const RightColumn = ({ title, price, image, isOpened, toggleOpen }) => (
         <Button primary>Sepete Ekle</Button>
       </TwoThirdRow>
       <TwoThirdRow>
-        <Button>Favorile</Button>
+        <Button>
+          <Icon src={"/favourite.svg"} />
+          Favorile
+        </Button>
       </TwoThirdRow>
     </InnerContainer>
     <SmallContainer>
