@@ -111,7 +111,7 @@ const RightColumn = ({ title, price, image, isOpened, toggleOpen }) => (
         </FullRow>
       </SmallContainer>
 
-      <SmallContainer transparent>
+      <FullRow transparent mobileColumn>
         <HalfRow withRightMargin padded>
           <Icon src={"/click_collect-sm.svg"} />
           <CenteredGrayTitle>
@@ -124,7 +124,7 @@ const RightColumn = ({ title, price, image, isOpened, toggleOpen }) => (
             Kapıda Ödeme ile Nakit veya Kartla Ödeme İmkanı
           </Title>
         </HalfRow>
-      </SmallContainer>
+      </FullRow>
     </Column>
   </Column>
 );

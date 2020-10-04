@@ -8,6 +8,11 @@ const base = styled.div`
   background: ${({ transparent }) => (transparent ? "transparent" : "white")};
   justify-content: ${({ spaceBetween }) => spaceBetween && "space-between"};
   width: ${({ fullWidth }) => fullWidth && "100%"};
+  margin-right: ${({ withRightMargin }) => withRightMargin && "0.5em"};
+  @media only screen and (max-width: 768px) {
+    margin-right: ${({ withRightMargin }) => withRightMargin && "0"};
+    flex-direction: ${({ mobileColumn }) => mobileColumn && "column"};
+  }
 `;
 
 export const OneThirdRow = styled(base)`
@@ -24,7 +29,6 @@ export const QuarterRow = styled(base)`
   flex-basis: 25%;
 `;
 export const HalfRow = styled(base)`
-  margin-right: ${({ withRightMargin }) => withRightMargin && "0.5em"};
   max-width: 50%;
   flex-basis: 50%;
   @media (max-width: 800px) {
