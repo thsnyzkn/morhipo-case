@@ -15,7 +15,7 @@ const Accordion = ({ titles, description }) => {
     <SmallContainer>
       <Column>
         {titles.map((title, index) => (
-          <Column>
+          <Column key={index}>
             <FullRow spaceBetween fullWidth>
               <SubHeading>{title}</SubHeading>
               <Arrow

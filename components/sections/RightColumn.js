@@ -6,7 +6,7 @@ import {
   SmallContainer,
   QuarterRow,
   HalfRow,
-} from "../layout";
+} from "../Layout";
 import { Heading, SubHeading, Title, Arrow, Icon, SmallImage } from "../ui";
 import Accordion from "./Accordion";
 import ButtonGroup from "./ButtonGroup";
