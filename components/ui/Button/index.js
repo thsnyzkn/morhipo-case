@@ -13,7 +13,8 @@ const base = styled.button`
   border: ${(props) =>
     props.primary ? "none" : `2px solid ${props.theme.colors.primary}`};
   border-radius: 4px;
-  color: ${(props) => (props.primary ? "white" : props.theme.colors.primary)};
+  color: ${(props) =>
+    props.primary ? props.theme.colors.contentBg : props.theme.colors.primary};
   margin: 0.25em 0;
   padding: 0.5em;
 `;

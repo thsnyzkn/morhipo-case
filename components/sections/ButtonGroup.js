@@ -8,7 +8,7 @@ const ButtonGroup = ({ sizes }) => {
   React.useEffect(() => {
     selectedSize && setError(null);
   }, [selectedSize, setError]);
-  const notifyFavorite = toastCreator("", "Favorilere Eklendi.");
+  const notifyFavorite = toastCreator("", "💜 Favorilere Eklendi.");
   const notifySuccess = toastCreator("success", "Sepete Eklendi.");
   return (
     <>

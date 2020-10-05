@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
 const InnerContainer = styled.section`
-  background: white;
+  background: ${({ theme }) => theme.colors.contentBg};
   padding: 1em;
-  border: 1px solid white;
+  border: ${({ theme }) => `1px solid ${theme.colors.contentBg}`};
   border-radius: 6px;
   margin-bottom: 0.5em;
 `;

@@ -17,32 +17,41 @@ const base = styled.div`
 `;
 
 export const OneThirdRow = styled(base)`
+  max-width: 33%;
   flex-basis: 33%;
   @media only screen and (max-width: 960px) {
+    max-width: 50%;
     flex-basis: 50%;
   }
 `;
 
 export const QuarterRow = styled(base)`
+  max-width: 25%;
   flex-basis: 25%;
   @media only screen and (max-width: 960px) {
+    max-width: 33%;
     flex-basis: 33%;
   }
 `;
 export const HalfRow = styled(base)`
+  max-width: 50%;
   flex-basis: 50%;
   @media only screen and (max-width: 960px) {
+    max-width: 100%;
     flex-basis: 100%;
   }
 `;
 
 export const FullRow = styled(base)`
+  max-width: 100%;
   flex-basis: 100%;
 `;
 
 export const TwoThirdRow = styled(base)`
+  max-width: 66%;
   flex-basis: 66%;
   @media only screen and (max-width: 960px) {
+    max-width: 100%;
     flex-basis: 100%;
   }
 `;

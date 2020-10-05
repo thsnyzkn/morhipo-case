@@ -16,7 +16,7 @@ const Accordion = ({ titles, description }) => {
       <Column>
         {titles.map((title, index) => (
           <Column key={index}>
-            <FullRow spaceBetween fullWidth>
+            <FullRow spaceBetween fullWidth halfPadded>
               <SubHeading>{title}</SubHeading>
               <Arrow
                 withRightMargin
