@@ -1,7 +1,7 @@
 import { GridContainer } from "../components";
 import { LeftColumn, RightColumn } from "../components/sections";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const randomProductId = Math.floor(Math.random() * 20) + 1;
   const response = await fetch(
     `https://fakestoreapi.com/products/${randomProductId}`
