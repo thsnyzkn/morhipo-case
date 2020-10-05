@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const GridContainer = styled.main`
-  max-width: 960px;
+  max-width: 1120px;
   display: grid;
   gap: 1rem;
   margin: 1em auto;

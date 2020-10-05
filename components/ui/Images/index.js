@@ -13,7 +13,7 @@ export const BigImage = styled.img`
 
 export const SmallImage = styled.img`
   width: 50px;
-  border: 1px solid black;
+  border: ${({ theme }) => `1px solid ${theme.colors.black}`};
   border-radius: 4px;
   margin-bottom: 1em;
 `;
@@ -23,7 +23,7 @@ export const ImgContainer = styled.div`
   padding-top: 133.3%;
   height: 0;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 6px;
   input[type="checkbox"] {
     display: none;
   }

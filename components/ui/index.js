@@ -4,6 +4,7 @@ import Collapse from "./Collapse";
 import Title from "./Titles";
 import Arrow from "./Arrow";
 import Icon from "./Icon";
+import BreadCrumbList from "./BreadCrumbList";
 import { BigImage, SmallImage, ImgContainer } from "./Images";
 export {
   Button,
@@ -17,4 +18,5 @@ export {
   BigImage,
   SmallImage,
   ImgContainer,
+  BreadCrumbList,
 };

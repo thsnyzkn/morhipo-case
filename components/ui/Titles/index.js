@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import PropTypes from "prop-types";
 
 const Title = styled.span`
   display: ${({ inlined }) => (inlined ? "inline-block" : "block")};
@@ -11,6 +12,16 @@ const Title = styled.span`
     (color === "gray" && theme.colors.mutedText) ||
     (color === "primary" && theme.colors.primary)};
   text-decoration: ${({ crossed }) => (crossed ? "line-through" : "none")};
+  white-space: ${({ forceOneLine }) => forceOneLine && "pre"};
 `;
+
+Title.propTypes = {
+  inlined: PropTypes.bool,
+  centered: PropTypes.bool,
+  small: PropTypes.bool,
+  crossed: PropTypes.bool,
+  color: PropTypes.oneOf(["orange", "red", "gray", "primary"]),
+  forceOneLine: PropTypes.bool,
+};
 
 export default Title;

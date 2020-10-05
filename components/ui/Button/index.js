@@ -20,8 +20,8 @@ const base = styled.button`
 `;
 
 export const SquareButton = styled(base)`
-  height: 3rem;
-  min-width: 3rem;
+  height: 3em;
+  min-width: 3em;
   outline: none;
   padding: 0;
   border: ${(props) =>

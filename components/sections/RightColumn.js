@@ -59,18 +59,24 @@ const RightColumn = ({ title, price, image, description }) => (
       </SmallContainer>
 
       <FullRow transparent mobileColumn>
-        <HalfRow withRightMargin padded>
-          <Icon src={"/click_collect-sm.svg"} />
-          <Title small centered gray>
+        <HalfRow
+          withRightMargin
+          fixedHeight
+          withBottomMargin
+          mobileFullWidth
+          verticalPadded
+        >
+          <Icon src={"/click_collect-sm.svg"} withLeftMargin />
+          <Title small centered>
             <Title color="orange" inlined centered>
               TıklaGel
             </Title>{" "}
             ile Mağazadan Teslimat İmkanı
           </Title>
         </HalfRow>
-        <HalfRow padded>
-          <Icon src={"/kapida_odeme-sm.svg"} withRightMargin />
-          <Title small centered gray>
+        <HalfRow verticalPadded withBottomMargin fixedHeight mobileFullWidth>
+          <Icon src={"/kapida_odeme-sm.svg"} withLeftMargin />
+          <Title small centered>
             <Title color="primary" inlined centered>
               Kapıda Ödeme
             </Title>{" "}
