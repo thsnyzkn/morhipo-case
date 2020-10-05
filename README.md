@@ -1,30 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Demo Link](https://morhipo-case.vercel.app/)
 
-## Getting Started
+Öncelikli olarak proje _create-next-app_ kullanılarak oluşturulmuş bir NextJS projesidir.
 
-First, run the development server:
+Dev ortamında çalıştırmak için öncelikle gerekli paketleri yüklemeniz gereklidir, bunun için de;
 
 ```bash
-npm run dev
-# or
+yarn
+```
+
+ya da
+
+```bash
+npm install
+```
+
+komutlarından birisini kullanmalısınız.
+
+Sonrasında dev ortamında çalıştırmak için
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ya da
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run dev
+```
 
-## Learn More
+yazabilirsiniz.
 
-To learn more about Next.js, take a look at the following resources:
+## Kullanılan paketler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- normalize.css - Tarayıcılar arası oluşabilecek farklılıkları gidermek adına kullanıldı.
+- emotion - CSS-in-JS metodunu kullanan bir kütüphane
+- react-collapse - accordion yapısında duruma göre görünmez olan component için kullanıldı.
+- react-toastify - Kullanıcıya favorilerine eklediğinde ya da sepete eklediği uyarı mesaı göstermek amacıyla kullanıldı.
