@@ -1,12 +1,7 @@
 import Button, { SquareButton } from "./Button";
 import { Heading, SubHeading } from "./Heading";
 import Collapse from "./Collapse";
-import Title, {
-  ActualPriceTag,
-  PreviousPriceTag,
-  GrayTitle,
-  CenteredGrayTitle,
-} from "./Titles";
+import Title, { PreviousPriceTag, GrayTitle } from "./Titles";
 import Arrow from "./Arrow";
 import Icon from "./Icon";
 import { BigImage, SmallImage, ImgContainer } from "./Images";
@@ -17,10 +12,6 @@ export {
   SubHeading,
   Collapse,
   Title,
-  ActualPriceTag,
-  PreviousPriceTag,
-  GrayTitle,
-  CenteredGrayTitle,
   Arrow,
   Icon,
   BigImage,

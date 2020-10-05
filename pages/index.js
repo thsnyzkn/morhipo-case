@@ -1,5 +1,5 @@
 import { GridContainer } from "../components";
-
+import { ToastContainer } from "react-toastify";
 import { LeftColumn, RightColumn } from "../components/sections";
 
 export async function getStaticProps() {
@@ -21,19 +21,19 @@ export async function getStaticProps() {
   };
 }
 
-const App = ({ image, title, price }) => {
-  const [isOpened, toggleOpen] = React.useState(false);
+const App = ({ image, title, price, category, description }) => {
   return (
-    <GridContainer>
-      <LeftColumn image={image} />
-      <RightColumn
-        title={title}
-        price={price}
-        image={image}
-        isOpened={isOpened}
-        toggleOpen={toggleOpen}
-      />
-    </GridContainer>
+    <>
+      <GridContainer>
+        <LeftColumn image={image} title={title} category={category} />
+        <RightColumn
+          title={title}
+          price={price}
+          image={image}
+          description={description}
+        />
+      </GridContainer>
+    </>
   );
 };
 

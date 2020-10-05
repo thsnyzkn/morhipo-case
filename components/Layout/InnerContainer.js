@@ -5,7 +5,7 @@ const InnerContainer = styled.section`
   padding: 1em;
   border: 1px solid white;
   border-radius: 6px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 `;
 
 export const SmallContainer = styled(InnerContainer)`

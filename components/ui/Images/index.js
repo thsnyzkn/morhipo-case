@@ -7,13 +7,15 @@ export const BigImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: fill;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 `;
 
 export const SmallImage = styled.img`
   width: 50px;
   border: 1px solid black;
   border-radius: 4px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 `;
 
 export const ImgContainer = styled.div`
@@ -22,4 +24,11 @@ export const ImgContainer = styled.div`
   height: 0;
   overflow: hidden;
   border-radius: 4px;
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ img {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
 `;

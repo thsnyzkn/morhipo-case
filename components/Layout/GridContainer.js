@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const GridContainer = styled.main`
-  max-width: 800px;
+  max-width: 960px;
   display: grid;
   gap: 1rem;
   margin: 1em auto;
@@ -13,7 +13,7 @@ const GridContainer = styled.main`
       "image"
       "detail";
     margin: 1em;
-    max-width: 100%;
+    max-width: 100vw;
   }
 `;
 
