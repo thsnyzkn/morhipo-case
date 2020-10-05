@@ -1,5 +1,5 @@
 import { FullRow, Column, SmallContainer } from "../Layout";
-import { Title, Arrow, SubHeading, Collapse } from "../ui";
+import { Title, Arrow, SubHeading, Collapse, Paragraph } from "../ui";
 
 const Accordion = ({ titles, description }) => {
   const [isOpened, toggleOpen] = React.useState(false);
@@ -23,14 +23,12 @@ const Accordion = ({ titles, description }) => {
                 onClick={() =>
                   setActiveIndex(activeIndex === index ? null : index)
                 }
-                direction={activeIndex === index ? "down" : "right"}
+                direction={activeIndex === index ? "up" : "right"}
               />
             </FullRow>
             <Collapse isOpened={activeIndex === index}>
               <FullRow padded>
-                <Title small centered gray>
-                  {description}
-                </Title>
+                <Paragraph>{description}</Paragraph>
               </FullRow>
             </Collapse>
           </Column>

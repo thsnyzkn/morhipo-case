@@ -2,7 +2,8 @@ import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 
 const Arrow = styled.i`
-  border: ${({ theme }) => `solid ${theme.colors.black}`};
+  border: ${({ theme, gray }) =>
+    `solid ${gray ? theme.colors.mutedText : theme.colors.black}`};
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;

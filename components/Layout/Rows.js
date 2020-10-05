@@ -9,7 +9,8 @@ const base = styled.div`
     (verticalPadded && "1em 0") ||
     "0"};
   border-radius: 6px;
-  background: ${({ transparent }) => (transparent ? "transparent" : "white")};
+  background: ${({ theme, transparent }) =>
+    transparent ? "transparent" : theme.colors.contentBg};
   justify-content: ${({ spaceBetween }) => spaceBetween && "space-between"};
   width: ${({ fullWidth }) => fullWidth && "100%"};
   margin-right: ${({ withRightMargin }) => withRightMargin && "0.5em"};

@@ -1,28 +1,11 @@
 import { Column } from "../Layout";
-import { ImgContainer, BigImage, Title, BreadCrumbList } from "../ui";
-import { formatProductTitle } from "../../util/helpers";
+import { ImgContainer, BigImage } from "../ui";
+import BreadCrumb from "./BreadCrumb";
 
-const LeftColumn = ({ image, title, category }) => {
-  const { brandName, productName } = formatProductTitle(title);
+const LeftColumn = ({ title, category, image }) => {
   return (
     <Column>
-      <BreadCrumbList>
-        <li style={{ marginRight: "0.5em" }}>
-          <Title centered forceOneLine color="gray">
-            Anasayfa
-          </Title>
-        </li>
-        <li style={{ marginRight: "0.5em" }}>
-          <Title centered forceOneLine color="gray">
-            {category}
-          </Title>
-        </li>
-        <li style={{ marginRight: "0.5em" }}>
-          <Title centered forceOneLine color="gray">
-            {`${brandName}-${productName}`}
-          </Title>
-        </li>
-      </BreadCrumbList>
+      <BreadCrumb category={category} title={title} />
       <label>
         <ImgContainer>
           <input type="checkbox" />
@@ -32,7 +15,5 @@ const LeftColumn = ({ image, title, category }) => {
     </Column>
   );
 };
-
-
 
 export default LeftColumn;

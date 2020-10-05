@@ -1,91 +1,73 @@
 import {
   Column,
   FullRow,
-  OneThirdRow,
-  InnerContainer,
   SmallContainer,
   QuarterRow,
   HalfRow,
 } from "../Layout";
-import { Heading, SubHeading, Title, Arrow, Icon, SmallImage } from "../ui";
+import { SubHeading, Title, Arrow, Icon, SmallImage } from "../ui";
 import Accordion from "./Accordion";
-import ButtonGroup from "./ButtonGroup";
+import ProductDetail from "./ProductDetail";
+import { formatProductTitle, capitalizeWord } from "../../util/helpers";
 
-const RightColumn = ({ title, price, image, description }) => (
-  <Column style={{ marginTop: "1.5em" }}>
-    <InnerContainer>
-      <FullRow spaceBetween>
-        <Heading>
-          {title.split(" ").slice(0, 3).join(" ").toUpperCase()}{" "}
-        </Heading>
-        <Icon mobileOnly src={"/share.svg"} />
-      </FullRow>
+const RightColumn = ({ title, price, image, description }) => {
+  const { brandName, productName } = formatProductTitle(title);
+  const titleCapitalized = capitalizeWord(brandName);
+  return (
+    <Column style={{ marginTop: "1.5em" }}>
+      <ProductDetail
+        brandName={titleCapitalized}
+        productName={productName}
+        price={price}
+        image={image}
+      />
 
-      <Title color="gray" small>
-        {title.split(" ").slice(-3).join(" ")}
-      </Title>
-      <OneThirdRow spaceBetween>
-        <Title inlined color="red" bold>
-          {price} TL
-        </Title>
-        <Title inlined color="gray" crossed>
-          {price} TL
-        </Title>
-      </OneThirdRow>
-      <Title>Renk:</Title>
-      <SmallImage src={image} />
-      <Title>Beden:</Title>
-      <ButtonGroup sizes={[32, 34, 36, 38]} />
-    </InnerContainer>
+      <Accordion
+        titles={["Ürün Hakkında", "Teslimat ve İade"]}
+        description={description}
+      />
+      <Column reversedInMobile>
+        <SmallContainer>
+          <FullRow spaceBetween halfPadded>
+            <SubHeading>{titleCapitalized}</SubHeading>
+            <QuarterRow spaceBetween>
+              <Title color="gray" centered small>
+                Tüm ürünlere git
+              </Title>
+              <Arrow direction="right" />
+            </QuarterRow>
+          </FullRow>
+        </SmallContainer>
 
-    <Accordion
-      titles={["Ürün Hakkında", "Teslimat ve İade"]}
-      description={description}
-    />
-
-    <Column reversedInMobile>
-      <SmallContainer>
-        <FullRow spaceBetween halfPadded>
-          <SubHeading>
-            {title.split(" ").slice(0, 3).join(" ").toUpperCase()}{" "}
-          </SubHeading>
-          <QuarterRow spaceBetween>
-            <Title color="gray" centered small>
-              Tüm ürünlere git
+        <FullRow transparent mobileColumn>
+          <HalfRow
+            withRightMargin
+            fixedHeight
+            withBottomMargin
+            mobileFullWidth
+            verticalPadded
+          >
+            <Icon src={"/click_collect-sm.svg"} withLeftMargin />
+            <Title small centered>
+              <Title color="orange" inlined centered>
+                TıklaGel
+              </Title>{" "}
+              ile Mağazadan Teslimat İmkanı
             </Title>
-            <Arrow direction="right" />
-          </QuarterRow>
+          </HalfRow>
+          <HalfRow verticalPadded withBottomMargin fixedHeight mobileFullWidth>
+            <Icon src={"/kapida_odeme-sm.svg"} withLeftMargin />
+            <Title small centered>
+              <Title color="primary" inlined centered>
+                Kapıda Ödeme
+              </Title>{" "}
+              ile Nakit veya Kartla Ödeme İmkanı
+            </Title>
+          </HalfRow>
         </FullRow>
-      </SmallContainer>
-
-      <FullRow transparent mobileColumn>
-        <HalfRow
-          withRightMargin
-          fixedHeight
-          withBottomMargin
-          mobileFullWidth
-          verticalPadded
-        >
-          <Icon src={"/click_collect-sm.svg"} withLeftMargin />
-          <Title small centered>
-            <Title color="orange" inlined centered>
-              TıklaGel
-            </Title>{" "}
-            ile Mağazadan Teslimat İmkanı
-          </Title>
-        </HalfRow>
-        <HalfRow verticalPadded withBottomMargin fixedHeight mobileFullWidth>
-          <Icon src={"/kapida_odeme-sm.svg"} withLeftMargin />
-          <Title small centered>
-            <Title color="primary" inlined centered>
-              Kapıda Ödeme
-            </Title>{" "}
-            ile Nakit veya Kartla Ödeme İmkanı
-          </Title>
-        </HalfRow>
-      </FullRow>
+      </Column>
     </Column>
-  </Column>
-);
+  );
+};
 
 export default RightColumn;

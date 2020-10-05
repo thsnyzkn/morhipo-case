@@ -5,6 +5,8 @@ import Title from "./Titles";
 import Arrow from "./Arrow";
 import Icon from "./Icon";
 import BreadCrumbList from "./BreadCrumbList";
+import BreadCrumbItem from "./BreadCrumbItem";
+import Paragraph from "./Paragraph";
 import { BigImage, SmallImage, ImgContainer } from "./Images";
 export {
   Button,
@@ -19,4 +21,6 @@ export {
   SmallImage,
   ImgContainer,
   BreadCrumbList,
+  BreadCrumbItem,
+  Paragraph,
 };
