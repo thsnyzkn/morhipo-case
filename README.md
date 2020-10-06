@@ -35,4 +35,4 @@ yazabilirsiniz.
 - normalize.css - Tarayıcılar arası oluşabilecek farklılıkları gidermek adına kullanıldı.
 - emotion - CSS-in-JS metodunu kullanan bir kütüphane
 - react-collapse - accordion yapısında duruma göre görünmez olan component için kullanıldı.
-- react-toastify - Kullanıcıya favorilerine eklediğinde ya da sepete eklediği uyarı mesaı göstermek amacıyla kullanıldı.
+- react-toastify - Kullanıcıya favorilerine eklediğinde ya da sepete eklediğinde uyarı mesajı göstermek amacıyla kullanıldı.
